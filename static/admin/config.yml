@@ -1,0 +1,31 @@
+# backend:
+#   name: test-repo
+
+#backend:
+#  name: gitlab
+#  repo: mooglemoogle/primary-site
+#  auth_type: implicit
+#  app_id: 8c7bd7ca9066c12fa938e16b21bcd021d3bceb4019b41f58acbf0debf150ca15
+
+backend:
+  name: github
+  repo: mooglemoogle/primary-gatsby-netlify
+  branch: master
+  base_url: https://nas.abysmalsoft.org
+
+display_url: https://nas.abysmalsoft.org
+publish_mode: editorial_workflow
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "src/pages/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown"}
