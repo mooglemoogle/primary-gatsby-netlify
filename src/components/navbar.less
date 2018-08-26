@@ -1,0 +1,112 @@
+@import "./variables.less";
+
+#header {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	background-color: @color-secondary-2-0;
+
+	.brand-container {
+		display: flex;
+		align-items: center;
+		flex-basis: 35px;
+
+		.brand-image {
+			img.main-logo {
+				width: 125px;
+				position: relative;
+				top: 25px;
+				left: 5px;
+				z-index: 100;
+
+				@media(min-width: 768px) {
+					width: 175px;
+					top: 50px;
+					left: 10px;
+				}
+			}
+		}
+
+		.site-title {
+			flex-grow: 1;
+			position: relative;
+			top: 20px;
+			color: lighten(@color-secondary-2-1, 10%);
+			font-size: 40px;
+			text-align: center;
+			padding-right: 65px;
+
+			@media(min-width: 768px) {
+				padding-right: 250px;
+				top: 25px;
+				font-size: 66px;
+			}
+		}
+
+		@media(min-width: 768px) {
+			flex-basis: 100px;
+		}
+	}
+
+	.nav-holder {
+		// position: absolute;
+		// bottom: 0;
+		width: 100%;
+
+		.navbar {
+			margin-bottom: 10px;
+			border-radius: 0;
+		}
+
+		.navbar-default {
+			background-color: transparent;
+			border-width: 0 0 thin 0;
+			border-color: @color-secondary-2-4;
+			margin-bottom: 0;
+
+			.navbar-collapse {
+				border: none;
+
+				&.in, &.collapsing {
+					padding-left: 0;
+					padding-right: 60px;
+				}
+
+				.navbar-nav {
+					margin: 0;
+					position: relative;
+					z-index: 101;
+
+					>li {
+						>a {
+							color: @color-secondary-2-4;
+							background-color: lighten(@color-secondary-2-1, 10%);
+
+							&.active{
+								color: lighten(@color-secondary-2-1, 10%);
+								background-color: @color-secondary-2-4;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.navbar-right {
+			margin-right: 50px;
+		}
+
+		.navbar-toggle {
+			top: -17px;
+			border-color: @color-secondary-2-4;
+
+			&:focus, &:hover {
+				background-color: @color-secondary-2-1;
+			}
+
+			.icon-bar {
+				background-color: @color-secondary-2-3;
+			}
+		}
+	}
+}

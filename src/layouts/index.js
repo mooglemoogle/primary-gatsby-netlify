@@ -2,44 +2,23 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import Header from '../components/header'
-import './index.css'
+import Navbar from '../components/Navbar'
+import './bootstrap/bootstrap.less'
 
-const Layout = ({ children, data }) => (
+const TemplateWrapper = ({ children }) => (
   <div>
-    <Helmet
-      title={data.site.siteMetadata.title}
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}
-    />
-    <Header siteTitle={data.site.siteMetadata.title} />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
-      {children()}
-    </div>
+    <Helmet title="Primary Show Gatsby">
+      <meta name="apple-itunes-app" content="app-id=1402714341" />
+      <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+      <link rel="alternate" type="application/rss+xml" title="Primary RSS" href="https://rss.simplecast.com/podcasts/6215/rss" />
+    </Helmet>
+    <Navbar />
+    <div>{children()}</div>
   </div>
 )
 
-Layout.propTypes = {
+TemplateWrapper.propTypes = {
   children: PropTypes.func,
 }
 
-export default Layout
-
-export const query = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
+export default TemplateWrapper
