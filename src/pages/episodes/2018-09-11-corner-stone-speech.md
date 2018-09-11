@@ -3,7 +3,20 @@ episodeNumber: '1'
 title: '"Corner Stone" Speech'
 episodeId: 2f5cc8a1
 date: 2018-06-18T04:00:00.000Z
-description: "Welcome to our very first episode of Primary!\r\n\r\nThe Civil War: you've heard _OF_ it, but let's hear from someone who actually lived it. Confederate Vice President Alexander Stephens has opinions on infrastructure, presidential term lengths, and, oh yeah, slavery, and he is very excited to tell you all about them. But only after you quiet down. Erin and Vinnie take Alexander Stephens at his word to understand the REAL issues that lead to the secession of eleven states and caused the Civil War. Erin also answers the question 'Just what IS a primary source?'"
+description: >-
+  Welcome to our very first episode of Primary!
+
+
+  ![Test Image](/img/2m8fw2lfswtw4v_z.jpg)
+
+
+  The Civil War: you've heard _OF_ it, but let's hear from someone who actually
+  lived it. Confederate Vice President Alexander Stephens has opinions on
+  infrastructure, presidential term lengths, and, oh yeah, slavery, and he is
+  very excited to tell you all about them. But only after you quiet down. Erin
+  and Vinnie take Alexander Stephens at his word to understand the REAL issues
+  that lead to the secession of eleven states and caused the Civil War. Erin
+  also answers the question 'Just what IS a primary source?'
 bonus:
   bonusId: 8368ee18
   enable: true
