@@ -39,11 +39,6 @@ const Navbar = () => (
                   </Link>
                 </li>
                 <li>
-                  <Link to="/blog" activeClassName="active">
-                    Blog
-                  </Link>
-                </li>
-                <li>
                   <Link to="/about" activeClassName="active">
                     About Us
                   </Link>

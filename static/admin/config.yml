@@ -27,5 +27,56 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
+      - label: "Author"
+        name: "author"
+        widget: "relation"
+        collection: "authors"
+        valueField: "name"
+        searchFields: ["name", "twitterHandle"]
+      - {label: "Description", name: "description", widget: "markdown"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "episodes"
+    label: "Episodes"
+    label_singular: "Episode"
+    folder: "src/pages/episodes"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Episode Number", name: "episodeNumber", widget: "number"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Episode ID", name: "episodeId", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Episode Description", name: "description", widget: "markdown"}
+      - label: "Bonus Audio"
+        name: "bonus"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Enable Bonus", name: "enable", widget: "boolean"}
+          - {label: "Bonus Title", name: "bonusTitle", widget: "string", required: false}
+          - {label: "Bonus Description", name: "bonusDescription", widget: "markdown", required: false}
+          - {label: "Bonus Audio ID", name: "bonusId", widget: "string", required: false}
+      - {label: "Primary Source Header Override", name: "primarySourceHeader", widget: "string", required: false}
+      - label: "Primary Sources"
+        name: "primarySources"
+        widget: "list"
+        fields:
+          - {label: "Source Text", name: "sourceText", widget: "markdown"}
+      - {label: "Secondary Source Header Override", name: "secondarySourceHeader", widget: "string", required: false}
+      - label: "Secondary Sources"
+        name: "secondarySources"
+        widget: "list"
+        fields:
+          - {label: "Source Text", name: "sourceText", widget: "markdown"}
+      - {label: "Credits", name: "credits", widget: "markdown", required: false}
+  - name: "authors"
+    label: "Authors"
+    label_singular: "Author"
+    folder: "src/authors"
+    create: true
+    fields:
+      - {label: "Name", name: "title", widget: "string"}
+      - {label: "Title", name: "subtitle", widget: "string"}
+      - {label: "Description", name: "description", widget: "markdown"}
+      - {label: "Twitter Handle", name: "twitterHandle", widget: "string"}
+      - {label: "Show on About", name: "visible", widget: "boolean"}
