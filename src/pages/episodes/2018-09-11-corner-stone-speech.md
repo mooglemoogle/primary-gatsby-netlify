@@ -7,7 +7,7 @@ description: >-
   Welcome to our very first episode of Primary!
 
 
-  ![Test Image](/img/2m8fw2lfswtw4v_z.jpg)
+  ![Test Image](/img/testlogo.jpg)
 
 
   The Civil War: you've heard _OF_ it, but let's hear from someone who actually
